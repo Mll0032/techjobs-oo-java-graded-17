@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Completing a TODO from PositionType.java Adding custom toString(), equals, and hashCode methods. This completes Task 2: Create Support Classes.">
+    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Completing a TODO from Job.java Adding two constructors for Job for a unique id and the five fields. Override the equals and hashCode considering the two Job objects are equal when their fields match. Then generate getters and setters for each field except nextId and only the getter for id. This completes Task 3: Complete the Job Class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +40,9 @@
     &quot;accountId&quot;: &quot;87f47283-f4f2-42dc-b6f2-c3f4e0349c3e&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -51,7 +54,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Gradle.TestTaskTwo.executor": "Run",
+    "Gradle.Build Java-Assignments-2.executor": "Run",
+    "Gradle.JobTest.executor": "Run",
+    "Gradle.JobTest.testJobConstructorSetsAllFields.executor": "Run",
+    "Gradle.JobTest.testJobsForEquality.executor": "Run",
+    "Gradle.TestTaskTwo.executor": "Debug",
+    "JUnit.JobTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -60,7 +68,79 @@
     "last_opened_file_path": "C:/Users/mllaw/Desktop/LaunchCode/Java-assignments/interfaces/studio/spinning-discs-studio"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TestTaskTwo">
+  <component name="RunManager" selected="Gradle.JobTest.testJobsForEquality">
+    <configuration name="JobTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.launchcode.techjobs.oo.JobTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="JobTest.testJobConstructorSetsAllFields" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.launchcode.techjobs.oo.JobTest.testJobConstructorSetsAllFields&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="JobTest.testJobsForEquality" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.launchcode.techjobs.oo.JobTest.testJobsForEquality&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TestTaskTwo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -109,8 +189,31 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="JobTest" type="JUnit" factoryName="JUnit">
+      <module name="techjobs-oo-java17-graded.test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="PACKAGE_NAME" value="org.launchcode.techjobs.oo" />
+      <option name="MAIN_CLASS_NAME" value="org.launchcode.techjobs.oo.JobTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.JobTest" />
+      <item itemvalue="Gradle.JobTest.testJobConstructorSetsAllFields" />
+      <item itemvalue="Gradle.JobTest.testJobsForEquality" />
+      <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
+      <item itemvalue="Gradle.TestTaskTwo" />
+      <item itemvalue="JUnit.JobTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.JobTest.testJobsForEquality" />
+        <item itemvalue="Gradle.JobTest.testJobConstructorSetsAllFields" />
+        <item itemvalue="Gradle.JobTest" />
         <item itemvalue="Gradle.TestTaskTwo" />
         <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
       </list>
@@ -149,13 +252,22 @@
       <option name="project" value="LOCAL" />
       <updated>1728599331392</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Completing a TODO from Job.java Adding two constructors for Job for a unique id and the five fields. Override the equals and hashCode considering the two Job objects are equal when their fields match. Then generate getters and setters for each field except nextId and only the getter for id. This completes Task 3: Complete the Job Class.">
+      <option name="closed" value="true" />
+      <created>1728600811880</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728600811880</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finish the TODO in CoreCompetency.java by using the generator to generate getters and setters for the id and value fields." />
     <MESSAGE value="Completing a TODO from Location.java Adding constructor that takes a string as a parameter and assigns it to value." />
     <MESSAGE value="Completing a TODO from PositionType.java Adding custom toString(), equals, and hashCode methods. This completes Task 2: Create Support Classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completing a TODO from PositionType.java Adding custom toString(), equals, and hashCode methods. This completes Task 2: Create Support Classes." />
+    <MESSAGE value="Completing a TODO from Job.java Adding two constructors for Job for a unique id and the five fields. Override the equals and hashCode considering the two Job objects are equal when their fields match. Then generate getters and setters for each field except nextId and only the getter for id. This completes Task 3: Complete the Job Class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completing a TODO from Job.java Adding two constructors for Job for a unique id and the five fields. Override the equals and hashCode considering the two Job objects are equal when their fields match. Then generate getters and setters for each field except nextId and only the getter for id. This completes Task 3: Complete the Job Class." />
   </component>
 </project>
