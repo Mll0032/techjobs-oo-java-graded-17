@@ -51,4 +51,54 @@ public void testJobsForEquality() {
     assertFalse(job1.equals(job2));
 }
 
+@Test
+public void testToStringStartsAndEndsWithNewLine() {
+    Job job = new Job("Name",
+            new Employer("Employer"),
+            new Location("Location"),
+            new PositionType("Position"),
+            new CoreCompetency("Skill"));
+    String jobString = job.toString();
+    String newLine = System.lineSeparator();
+
+    assertTrue(jobString.startsWith(newLine));
+    assertTrue(jobString.endsWith(newLine));
+}
+
+@Test
+    public void testToStringContainsCorrectLabelsAndData() {
+    Job job = new Job("Name",
+            new Employer("Employer"),
+            new Location("Location"),
+            new PositionType("Position"),
+            new CoreCompetency("Skill"));
+    String newLine = System.lineSeparator();
+    String expected = newLine +
+            "ID: " + job.getId() + newLine +
+            "Name: Name" + newLine +
+            "Employer: Employer" + newLine +
+            "Location: Location" + newLine +
+            "Position Type: Position" + newLine +
+            "Core Competency: Skill" + newLine;
+    assertEquals(expected, job.toString());
+}
+
+@Test
+public void testToStringHandlesEmptyField() {
+    Job job = new Job("",
+            new Employer(""),
+            new Location(""),
+            new PositionType(""),
+            new CoreCompetency(""));
+    String newLine = System.lineSeparator();
+    String expected = newLine +
+            "ID: " + job.getId() + newLine +
+            "Name: Data not available" + newLine +
+            "Employer: Data not available" + newLine +
+            "Location: Data not available" + newLine +
+            "Position Type: Data not available" + newLine +
+            "Core Competency: Data not available" + newLine;
+    assertEquals(expected, job.toString());
+}
+
 }
