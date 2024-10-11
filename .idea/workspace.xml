@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Update JobTest.java using TDD create a test for our toString method that has not been created to see if it starts with and ends with a newLine (variable) or System.lineSerperator(). Update Job.java to include our toString method which will check each field for null values or if a field is missing and returns Data not available, and formats the output for readability. Then create another test to check if the toString method has the correct labels and data. Update Job.java to pass the new test. Create the last test to see if the toString method handles the empty fields correctly.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/JobField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Employer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Employer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/PositionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/PositionType.java" afterDir="false" />
-    </list>
+    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Create JobField.java as a base Class to hold any repeated code that could be inherited by other classes. Make sure it is abstract to prevent the created of a Jobfield object. Extend JobField to Employer, Location, PositionType, CoreCompetency classes. This completes Task 6 Refactor to DRY the Support Classes." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,6 +73,7 @@
     "Gradle.TestTaskSix.executor": "Run",
     "Gradle.TestTaskThree.executor": "Run",
     "Gradle.TestTaskTwo.executor": "Run",
+    "Gradle.Tests in 'org.launchcode.techjobs.oo'.executor": "Run",
     "JUnit.JobTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -88,7 +83,20 @@
     "last_opened_file_path": "C:/Users/mllaw/Desktop/LaunchCode/Java-assignments/interfaces/studio/spinning-discs-studio"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TestTaskSix">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.launchcode.techjobs.oo.Main" />
+      <module name="techjobs-oo-java17-graded.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.launchcode.techjobs.oo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestTaskFive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -161,7 +169,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestTaskThree" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'org.launchcode.techjobs.oo'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -174,31 +182,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.launchcode.techjobs.oo.TestTaskThree&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestTaskTwo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.launchcode.techjobs.oo.TestTaskTwo&quot;" />
+            <option value="&quot;org.launchcode.techjobs.oo.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -222,20 +206,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.TestTaskFive" />
       <item itemvalue="Gradle.TestTaskFour" />
       <item itemvalue="Gradle.TestTaskSix" />
-      <item itemvalue="Gradle.TestTaskThree" />
-      <item itemvalue="Gradle.TestTaskTwo" />
+      <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
       <item itemvalue="JUnit.JobTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
         <item itemvalue="Gradle.TestTaskSix" />
         <item itemvalue="Gradle.TestTaskFive" />
         <item itemvalue="Gradle.TestTaskFour" />
-        <item itemvalue="Gradle.TestTaskThree" />
-        <item itemvalue="Gradle.TestTaskTwo" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728607733213</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Create JobField.java as a base Class to hold any repeated code that could be inherited by other classes. Make sure it is abstract to prevent the created of a Jobfield object. Extend JobField to Employer, Location, PositionType, CoreCompetency classes. This completes Task 6 Refactor to DRY the Support Classes.">
+      <option name="closed" value="true" />
+      <created>1728609254656</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728609254656</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -306,6 +298,7 @@
     <MESSAGE value="Completing a TODO from Job.java Adding two constructors for Job for a unique id and the five fields. Override the equals and hashCode considering the two Job objects are equal when their fields match. Then generate getters and setters for each field except nextId and only the getter for id. This completes Task 3: Complete the Job Class." />
     <MESSAGE value="Create the JobTest.java code testSettingJobId() making sure each job has a unique Id. testJobConstructorSetsAllFields() making sure to use assertEquals() and assertTrue() to make sure the constructor assigns both the class and value to each field. testJobsforEquality check if equals returns false. since in our case it should only return false since all our jobs have a unique Id it should never return true." />
     <MESSAGE value="Update JobTest.java using TDD create a test for our toString method that has not been created to see if it starts with and ends with a newLine (variable) or System.lineSerperator(). Update Job.java to include our toString method which will check each field for null values or if a field is missing and returns Data not available, and formats the output for readability. Then create another test to check if the toString method has the correct labels and data. Update Job.java to pass the new test. Create the last test to see if the toString method handles the empty fields correctly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update JobTest.java using TDD create a test for our toString method that has not been created to see if it starts with and ends with a newLine (variable) or System.lineSerperator(). Update Job.java to include our toString method which will check each field for null values or if a field is missing and returns Data not available, and formats the output for readability. Then create another test to check if the toString method has the correct labels and data. Update Job.java to pass the new test. Create the last test to see if the toString method handles the empty fields correctly." />
+    <MESSAGE value="Create JobField.java as a base Class to hold any repeated code that could be inherited by other classes. Make sure it is abstract to prevent the created of a Jobfield object. Extend JobField to Employer, Location, PositionType, CoreCompetency classes. This completes Task 6 Refactor to DRY the Support Classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create JobField.java as a base Class to hold any repeated code that could be inherited by other classes. Make sure it is abstract to prevent the created of a Jobfield object. Extend JobField to Employer, Location, PositionType, CoreCompetency classes. This completes Task 6 Refactor to DRY the Support Classes." />
   </component>
 </project>
